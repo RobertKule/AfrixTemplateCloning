@@ -11,8 +11,7 @@ Notre objectif est de démontrer notre capacité à collaborer efficacement sur 
 ### Visualisation du Template
 
 Voici l'image de référence du template que nous avons choisi de cloner :
-
-**en cours**
+![template](https://github.com/user-attachments/assets/dc4c9e1e-ffd4-48f9-aa4c-5df65f761eff)
 
 ---
 
