@@ -1,0 +1,27 @@
+.hero{
+    background-image:url("./images/design-d-interieur-de-salle-a-manger-pour-enfants-dans-une-esthetique-pastel-moderne.jpg") ;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.hero button{
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+}
