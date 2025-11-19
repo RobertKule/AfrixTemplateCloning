@@ -1,143 +1,172 @@
-/* Reset léger */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#07202b; }
-
-/* Variables couleurs */
+/* ======================
+   Couleurs
+   ====================== */
 :root{
-  --bg: #e9f2f4;          /* fond général */
-  --card: #ffffff;        /* carte / bloc */
-  --accent: #d64b2a;      /* boutons principal (rouge-orange) */
-  --accent-2: #ff8a3d;    /* hover gradient */
-  --muted: #6b7880;       /* texte secondaire */
-  --shadow: 0 8px 24px rgba(7,32,43,0.08);
+  --page-bg: #dbeef2;
+  --card-bg: #fbfbfb;
+  --muted: #6b7280;
+  --heading: #0e2530;
+  --button-bg: #0b2b3a;
+  --button-text: #ffffff;
+  --accent: #f6a26b;
+  --gap: 28px;
 }
 
-body { background: var(--bg); display:flex; align-items:center; justify-content:center; padding:40px 18px; }
-
-/* conteneur page */
-.page { width: 1100px; max-width: 96%; }
-
-/* Grid principal : 2 colonnes x 2 rangées mais agencement visuel comme l'image */
-.grid-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(220px, auto);
-  gap: 22px;
-}
-
-/* HERO texte */
-.hero {
-  background: var(--card);
-  padding: 42px;
-  display:flex; align-items:center;
-  box-shadow: var(--shadow);
-  border-radius: 10px;
-}
-.hero-content h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  line-height: 1.05;
-  color: #0b2730;
-  margin-bottom: 12px;
-}
-.lead { color: var(--muted); margin-bottom: 20px; }
-
-/* actions */
-.hero-actions { display:flex; gap:12px; align-items:center; }
-.btn {
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
+/* ======================
+   Base
+   ====================== */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--page-bg);
+  font-family:"Inter", sans-serif;
+  display:flex;
   justify-content:center;
-  padding:10px 18px;
-  border-radius: 999px;
+  padding:48px 20px;
+}
+
+.wrap{
+  max-width:920px;
+  width:100%;
+}
+
+/* ======================
+   Grid
+   ====================== */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  /* gap:var(--gap); */
+}
+
+/* ======================
+   Cartes
+   ====================== */
+.card{
+  background:var(--card-bg);
+  border-radius:8px;
+  padding:34px;
+  box-shadow:0 6px 18px rgba(11,38,52,0.06);
+}
+
+/* ======================
+   Bloc texte principal
+   ====================== */
+.hero-text .kicker{
+  font-size:13px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
   font-weight:600;
-  transition: transform .18s ease, box-shadow .18s ease;
-  border: none;
-}
-.btn:active { transform: translateY(1px); }
-.btn.small { padding:7px 12px; font-size:14px; }
-
-/* primary (bouton rouge) */
-.btn.primary {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  color: white;
-  box-shadow: 0 8px 18px rgba(214,75,42,0.18);
-}
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 34px rgba(214,75,42,0.22);
 }
 
-/* ghost bouton */
-.btn.ghost {
-  background: transparent;
-  color: var(--muted);
-  border: 1px solid rgba(11,39,44,0.06);
+.hero-title{
+  font-family:"Playfair Display", serif;
+  font-size:34px;
+  margin:0 0 16px 0;
+  color:var(--heading);
 }
 
-/* HERO image */
-.hero-image {
-  background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.9));
+.hero-desc{
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:22px;
+}
+
+/* Boutons */
+.btn{
+  background:var(--button-bg);
+  color:var(--button-text);
+  padding:10px 20px;
+  border-radius:50px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.controls{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:var(--accent);
+  border-radius:50%;
+  display:inline-block;
+}
+
+/* ======================
+   Image chaise
+   ====================== */
+.hero-image{
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius: 10px;
-  padding: 28px;
-  box-shadow: var(--shadow);
-}
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  display:block;
 }
 
-/* Cards (lignes suivantes) */
-.card {
-  background: var(--card);
-  display:flex;
-  align-items:center;
-  gap:18px;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-}
-.card img {
-  width: 46%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
+.hero-image img{
+  max-width:100%;
+  padding:24px;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
 }
 
-/* card-body texte */
-.card-body { padding: 12px 6px; }
-.card-body h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
+/* ======================
+   Image déco
+   ====================== */
+.photo-card{
+  padding:0;
+}
+
+.photo-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* ======================
+   Texte seconde carte
+   ====================== */
+.small-kicker{
+  font-size:13px;
+  text-transform:uppercase;
+  color:var(--muted);
   margin-bottom:8px;
 }
-.card-body p { color: var(--muted); margin-bottom:12px; }
 
-/* positionnement pour ressembler à maquette : card-left occupe colonne 1 span2? */
-.card-left { grid-column: 1 / 2; grid-row: 2 / 3; }
-.card-right { grid-column: 2 / 3; grid-row: 3 / 4; }
-
-/* Ajustements Responsive */
-@media (max-width: 880px) {
-  .grid-wrap { grid-template-columns: 1fr; }
-  .hero-image, .hero, .card { padding: 18px; }
-  .card img { width: 100%; max-width: none; }
-  .card { flex-direction: column; text-align:center; }
-  .hero-content h1 { font-size: 26px; }
+.sub-title{
+  font-family:"Playfair Display", serif;
+  font-size:26px;
+  color:var(--heading);
+  margin:0 0 12px 0;
 }
 
-/* footer */
-.site-footer {
-  margin-top: 24px;
-  text-align:center;
-  font-size:13px;
+.sub-desc{
   color:var(--muted);
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+.sub-controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.dot.small{
+  width:8px;
+  height:8px;
+}
+
+/* ======================
+   Responsive mobile
+   ====================== */
+@media(max-width:880px){
+  .grid{
+    grid-template-columns:1fr;
+  }
 }

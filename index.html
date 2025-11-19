@@ -2,67 +2,62 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>GreenLeaf — Vente de plantes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Section Grille</title>
 
-  <!-- Google Fonts -->
+  <!-- Import du fichier CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <main class="page">
-    <!-- GRID PRINCIPALE -->
-    <section class="grid-wrap">
-      <!-- HERO (ligne 1 : texte + image) -->
-      <article class="hero">
-        <div class="hero-content">
-          <h1>Plantes d'intérieur élégantes pour chaque espace</h1>
-          <p class="lead">
-            Découvrez notre sélection de plantes adaptées à la vie en appartement et au bureau — conseils d'entretien inclus.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#shop">Voir la boutique</a>
-            <a class="btn ghost" href="#contact">Contactez-nous</a>
+  <div class="wrap">
+    <div class="grid">
+
+      <!-- Bloc texte gauche -->
+      <section class="card hero-text">
+        <div class="kicker">Collection exclusive</div>
+        <h1 class="hero-title">LES PLANTES DECORATRICES.</h1>
+        <p class="hero-desc">
+          Nous vous donnons les solutions pour la décoration de vos maisons, bureaux et espace de travail, tout en respectant l'environnement
+        </p>
+
+        <div class="controls">
+          <button class="btn">Lancer l'achat</button>
+          <div class="meta">
+            <span class="dot"></span>
+            <span>6 collections</span>
           </div>
         </div>
-      </article>
+      </section>
 
-      <aside class="hero-image">
-        <!-- plant mis en vente-->
-        <img src="./Thriving popular houseplants in a welllit indoor environment _ Premium AI-generated image.jpg" alt="Fauteuil et plante - mise en scène" />
+      <!-- Image chaise -->
+      <aside class="card hero-image">
+        <img src="./Thriving popular houseplants in a welllit indoor environment _ Premium AI-generated image.jpg" alt="plante1" />
       </aside>
 
-      <!-- ROW 2 : carte image gauche + texte droite -->
-      <article class="card card-left">
-        <img src="./téléchargement (1).jpg" alt="Plante 1" />
-        <div class="card-body">
-          <h2>Collection Pour votre decoration</h2>
-          <p>Plantes faciles d'entretien sélectionnées pour purifier l'air et embellir votre intérieur.</p>
-          <a class="btn primary small" href="#purité">Voir plus</a>
+      <!-- Image déco -->
+      <figure class="card photo-card">
+        <img src="./téléchargement.jpg" alt="Décoration élégante" />
+      </figure>
+
+      <!-- Bloc texte droite -->
+      <section class="card sub-card">
+        <div class="small-kicker">CONFORT PROFESSIONNEL</div>
+        <h2 class="sub-title">vivez notre elegance</h2>
+        <p class="sub-desc">
+          Nous permettons de vivre la nature et respiré l'air naturel dans vos maisons et bureaux, la protection de l'environnement c'est nous.
+        </p>
+
+        <div class="sub-controls">
+          <button class="btn">Voir nos plantes</button>
+          <div class="ghost"><span class="dot small"></span> 8 collection à Goma</div>
         </div>
-      </article>
+      </section>
 
-      <!-- ROW 3 : texte gauche + image droite -->
-      <article class="card card-right">
-        <div class="card-body">
-          <h2>Offres du moment</h2>
-          <p>Promotions sur des plantes d'intérieur populaires — livraison rapide à Goma.</p>
-          <a class="btn primary small" href="#offers">Profiter</a>
-        </div>
-        <img src="./téléchargement.jpg" alt="Plante 2" />
-      </article>
-    </section>
-
-    <!-- simple footer -->
-    <footer class="site-footer">
-      © <span id="year"></span> GreenLeaf — Vente de plantes • Contact : wamwekelafidele@gmail.com +243970466701
-    </footer>
-  </main>
-
-  <script>
-    // année automatique
-    document.getElementById('year').textContent = new Date(2025).getFullYear(2025);
-  </script>
+    </div>
+  </div>
 </body>
 </html>
