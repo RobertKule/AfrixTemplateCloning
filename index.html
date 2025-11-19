@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GreenLeaf — Vente de plantes</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <!-- GRID PRINCIPALE -->
+    <section class="grid-wrap">
+      <!-- HERO (ligne 1 : texte + image) -->
+      <article class="hero">
+        <div class="hero-content">
+          <h1>Plantes d'intérieur élégantes pour chaque espace</h1>
+          <p class="lead">
+            Découvrez notre sélection de plantes adaptées à la vie en appartement et au bureau — conseils d'entretien inclus.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#shop">Voir la boutique</a>
+            <a class="btn ghost" href="#contact">Contactez-nous</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="hero-image">
+        <!-- plant mis en vente-->
+        <img src="./Thriving popular houseplants in a welllit indoor environment _ Premium AI-generated image.jpg" alt="Fauteuil et plante - mise en scène" />
+      </aside>
+
+      <!-- ROW 2 : carte image gauche + texte droite -->
+      <article class="card card-left">
+        <img src="./téléchargement (1).jpg" alt="Plante 1" />
+        <div class="card-body">
+          <h2>Collection Pour votre decoration</h2>
+          <p>Plantes faciles d'entretien sélectionnées pour purifier l'air et embellir votre intérieur.</p>
+          <a class="btn primary small" href="#purité">Voir plus</a>
+        </div>
+      </article>
+
+      <!-- ROW 3 : texte gauche + image droite -->
+      <article class="card card-right">
+        <div class="card-body">
+          <h2>Offres du moment</h2>
+          <p>Promotions sur des plantes d'intérieur populaires — livraison rapide à Goma.</p>
+          <a class="btn primary small" href="#offers">Profiter</a>
+        </div>
+        <img src="./téléchargement.jpg" alt="Plante 2" />
+      </article>
+    </section>
+
+    <!-- simple footer -->
+    <footer class="site-footer">
+      © <span id="year"></span> GreenLeaf — Vente de plantes • Contact : wamwekelafidele@gmail.com +243970466701
+    </footer>
+  </main>
+
+  <script>
+    // année automatique
+    document.getElementById('year').textContent = new Date(2025).getFullYear(2025);
+  </script>
+</body>
+</html>
