@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working Space</title>
+    <title>PlantSelli — Vente des plantes</title>
     <link rel="shortcut icon" href="images/afrix_global_logo.jpg" type="image/x-icon">
-    <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
+    <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Header -->
+
+<!-- Top Header -->
 <div class="top-bar">
-  <div class="top-message">Livraison gratuite</div>
+  <div class="top-message">Livraison gratuite sur toutes vos plantes</div>
   <div class="top-icons">
     <span class="icon">🔍</span>
     <span class="icon">🛒</span>
@@ -23,14 +25,14 @@
 <!-- Main Header -->
 <header class="main-header">
   <div class="logo">
-    <h1>Flower</h1>
+    <h1>PlantSelli</h1>
   </div>
 
   <nav class="main-nav">
     <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">Home</a></li>
+      <li><a href="#home">Accueil</a></li>
       <li><a href="#">À propos</a></li>
+      <li><a href="#collections">Collections</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
@@ -41,69 +43,129 @@
     <button class="login-btn">Connexion</button>
   </div>
 </header>
-<main><section class="heroSection">
-        <h5> Your indoor oasis</h5>
-        <h1>Plants that bring<br>life to your space</h1>
-        <p>Explore our curated collection of indoor plants designed to add elegance, freshness, and well-bein to your home.</p>
-        <button class="ctah">Shop the coleection</button>
-</section>
-<section>
-    
-  <div class="wrap">
-    <div class="grid">
 
-      <!-- Bloc texte gauche -->
-      <section class="card hero-text">
-        <div class="kicker">Collection exclusive</div>
-        <h1 class="hero-title">LES PLANTES DECORATRICES.</h1>
-        <p class="hero-desc">
-          Nous vous donnons les solutions pour la décoration de vos maisons, bureaux et espace de travail, tout en respectant l'environnement
+<main id="home">
+
+    <!-- HERO SECTION -->
+    <section class="heroSection">
+        <h5>L’univers de vos plantes</h5>
+        <h1>Des plantes qui<br> donnent vie à vos espaces</h1>
+        <p>
+            Découvrez notre collection soigneusement sélectionnée de plantes décoratives 
+            conçues pour apporter beauté, fraîcheur et bien-être dans votre maison.
         </p>
+        <button class="ctah">Voir la collection</button>
+    </section>
 
-        <div class="controls">
-          <button class="btn">Lancer l'achat</button>
-          <div class="meta">
-            <span class="dot"></span>
-            <span>6 collections</span>
-          </div>
+    <!-- GRID SECTION -->
+    <section id="collections">
+      <div class="wrap">
+        <div class="grid">
+
+          <!-- Bloc texte gauche -->
+          <section class="card hero-text">
+            <div class="kicker">Collection exclusive</div>
+            <h1 class="hero-title">PLANTES DÉCORATIVES</h1>
+            <p class="hero-desc">
+              Nous proposons des plantes idéales pour décorer vos maisons, bureaux et espaces de travail,
+              tout en respectant la nature et l’environnement.
+            </p>
+
+            <div class="controls">
+              <button class="btn">Lancer l'achat</button>
+              <div class="meta">
+                <span class="dot"></span>
+                <span>6 collections</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Image 1 -->
+          <aside class="card hero-image">
+            <img src="images/grid1.jpg" alt="plante1" />
+          </aside>
+
+          <!-- Image 2 -->
+          <figure class="card photo-card">
+            <img src="images/grid2.jpg" alt="Décoration élégante" />
+          </figure>
+
+          <!-- Bloc texte droite -->
+          <section class="card sub-card">
+            <div class="small-kicker">CONFORT NATUREL</div>
+            <h2 class="sub-title">Vivez notre élégance végétale</h2>
+            <p class="sub-desc">
+              Offrez-vous des plantes qui apportent bien-être, air naturel et beauté dans vos espaces. 
+              PlantSelli rend la nature accessible à tous.
+            </p>
+
+            <div class="sub-controls">
+              <button class="btn">Voir nos plantes</button>
+              <div class="ghost"><span class="dot small"></span> 8 collections à Goma</div>
+            </div>
+          </section>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Image chaise -->
-      <aside class="card hero-image">
-        <img src="images/grid1.jpg" alt="plante1" />
-      </aside>
+    <!-- CTA -->
+    <section class="cta">
+        <h3>Transformez votre espace grâce à nos plantes décoratives et accessibles.</h3>
+        <button>Voir tous nos produits</button>
+    </section>
 
-      <!-- Image déco -->
-      <figure class="card photo-card">
-        <img src="images/grid2.jpg" alt="Décoration élégante" />
-      </figure>
+</main>
 
-      <!-- Bloc texte droite -->
-      <section class="card sub-card">
-        <div class="small-kicker">CONFORT PROFESSIONNEL</div>
-        <h2 class="sub-title">vivez notre elegance</h2>
-        <p class="sub-desc">
-          Nous permettons de vivre la nature et respiré l'air naturel dans vos maisons et bureaux, la protection de l'environnement c'est nous.
-        </p>
+<!-- FOOTER -->
+<footer class="footer-clean">
+    <div class="footer-container">
 
-        <div class="sub-controls">
-          <button class="btn">Voir nos plantes</button>
-          <div class="ghost"><span class="dot small"></span> 8 collection à Goma</div>
+        <!-- Colonne 1 -->
+        <div class="footer-col">
+            <span class="footer-small-title">PlantSelli</span>
+            <h2>Votre boutique<br> de plantes décoratives</h2>
         </div>
-      </section>
+
+        <!-- Colonne 2 -->
+        <div class="footer-col">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Mon panier</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class="footer-col">
+            <p class="footer-text">
+                PlantSelli vous offre des plantes sélectionnées avec soin pour créer
+                des espaces élégants, naturels et apaisants.
+            </p>
+        </div>
+
+        <!-- Colonne 4 -->
+        <div class="footer-col">
+            <h3>Service Client</h3>
+            <p>Besoin d'aide pour choisir vos plantes ? Contactez nos experts.</p>
+
+            <button class="footer-cta">Parler à un expert →</button>
+        </div>
 
     </div>
-  </div>
-</section>
-    <section class="cta">
-        <h3>Transformez votre espace avec nos chaises design et abordables.</h3>
-        <button>voir tous nos produits</button>
-    </section>
-</main>
-    <footer>
-        footer
-    </footer>
+
+    <div class="footer-bottom">
+        <p>© 2025 PlantSelli — Vente de plantes décoratives</p>
+        <div class="footer-socials">
+            <span>🌐</span>
+            <span>🐦</span>
+            <span>📘</span>
+            <span>📸</span>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
