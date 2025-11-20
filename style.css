@@ -1,27 +1,468 @@
-.hero{
-    background-image:url("./images/design-d-interieur-de-salle-a-manger-pour-enfants-dans-une-esthetique-pastel-moderne.jpg") ;
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+/* ============================================================
+   VARIABLES GLOBAL
+   ============================================================ */
+:root {
+  --primary: #0b2b3a;
+  --light-blue: #d8eaf0;
+  --accent: #1f2f38;
+  --white: #ffffff;
+  --text-dark: #0e2530;
+  --text-soft: #6c7a82;
+  --font-main: 'Inter', sans-serif;
+  --font-title: 'Playfair Display', serif;
+  --font-logo: 'Great Vibes', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  --radius: 14px;
 }
-.hero button{
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: white;
-      color: black;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 15px;
-      font-family: Arial, Helvetica, sans-serif;
+
+
+/* ============================================================
+   RESET
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-blue);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.top-bar {
+  background: var(--accent);
+  color: white;
+  padding: 10px 40px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.icon {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.main-header {
+  background: white;
+  padding: 26px 45px;
+  margin: 0 auto;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;      /* Rend le header sticky */
+  top: 0;                /* Position en haut */
+  z-index: 999;          /* Le garde au-dessus du contenu */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Optionnel : petit shadow au scroll */
+}
+
+
+.logo h1 {
+  font-family: var(--font-logo);
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+
+
+.main-nav ul {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+/* Soulignement animé */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.35s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.login-btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.login-btn:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.heroSection {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: url('images/heroimg.jpg') center/cover no-repeat;
+  padding: 120px 40px;
+  text-align: center;
+  color: white;
+}
+
+.heroSection h5 {
+  font-style: italic;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.heroSection h1 {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.heroSection p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.ctah {
+  background: white;
+  color: var(--accent);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ctah:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+}
+
+/* ============================================================
+   GRID SECTION
+   ============================================================ */
+.wrap {
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0px 14px 40px rgba(0,0,0,0.12);
+}
+
+/* Text blocks */
+.kicker,
+.small-kicker {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--text-soft);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: var(--font-title);
+  color: var(--text-dark);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.hero-desc { margin-bottom: 25px; }
+
+.controls,
+.sub-controls {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.btn:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+}
+
+/* Images hover */
+.hero-image img,
+.photo-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  transition: transform 0.45s ease;
+}
+
+.hero-image img:hover,
+.photo-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Secondary Card */
+.sub-title {
+  font-family: var(--font-title);
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.ghost {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.cta {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("images/cta.jpg") center/cover no-repeat;
+  text-align: center;
+  color: white;
+  transition: 0.4s ease;
+}
+
+.cta:hover {
+  filter: brightness(1.05);
+}
+
+.cta h3 {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.cta button {
+  background: white;
+  color: var(--accent);
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cta button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer-clean {
+  background: white;
+  padding: 70px 40px;
+  padding-bottom: 10px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 40px;
+}
+
+.footer-small-title {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+.footer-clean h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  margin-top: 8px;
+  color: var(--text-dark);
+}
+
+/* Footer links */
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+/* CTA */
+.footer-cta {
+  background: var(--accent);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.footer-cta:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  /* border-top: 1px solid #ddd;  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: var(--text-soft);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.footer-socials span {
+  cursor: pointer;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.footer-socials span:hover {
+  transform: rotate(8deg) scale(1.4);
+  opacity: 0.85;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1024px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+  .main-header{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+    position: inherit;
+  }
+  .main-nav ul{
+    flex-direction:column;
+  }
+  .heroSection h1{
+    font-size:2rem;
+  }
+  .cta h3{
+    font-size:1.6rem;
+  }
+}
+
+@media(max-width:500px){
+  .heroSection{
+    padding:80px 20px;
+  }
+  .cta{
+    padding:80px 20px;
+  }
 }
