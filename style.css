@@ -288,6 +288,10 @@ body {
   box-shadow: var(--shadow);
   transition: var(--transition);
   animation: fadeInUp 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .card:nth-child(odd) {
